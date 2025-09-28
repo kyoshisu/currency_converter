@@ -26,10 +26,10 @@ class TestCurrencyConverterAPI:
         # Тест успешной конвертации валют #
         if is_ci_environment():
             pytest.skip("Skipping API test in CI environment - server not available")
-        
+
         response = requests.get(f"{BASE_URL}/convert?from_currency=USD&to_currency=EUR&amount=100")
         assert response.status_code == 200
-    
+
         data = response.json()
         assert data["success"] == True
         assert "data" in data
@@ -59,7 +59,7 @@ class TestCurrencyConverterAPI:
 
         response = requests.get(f"{BASE_URL}/history")
         assert response.status_code == 200
-    
+
         data = response.json()
         assert data["success"] == True
         assert "data" in data
@@ -78,3 +78,4 @@ class TestCurrencyConverterAPI:
         assert "data" in data
         assert "currencies" in data["data"]
         assert "USD" in data["data"]["currencies"]
+

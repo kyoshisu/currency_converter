@@ -18,7 +18,7 @@ async def root():
         "message": "Currency Converter API is running!",
         "endpoints": {
             "/convert": "Convert currency (GET /convert?from_currency=USD&to_currency=EUR&amount=100)",
-            "/history": "Get conversion history (GET /history?limit=10)", 
+            "/history": "Get conversion history (GET /history?limit=10)",
             "/currencies": "Get available currencies (GET /currencies)",
             "/docs": "API documentation"
         }
@@ -81,3 +81,4 @@ async def get_currencies():
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run("server:app", host="0.0.0.0", port=8008, reload=True)
+

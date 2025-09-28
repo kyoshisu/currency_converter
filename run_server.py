@@ -13,5 +13,5 @@ if __name__ == "__main__":
     print("   GET /currencies")
     print("   GET /docs - Interactive API documentation")
     print("⏹️  Press Ctrl+C to stop the server\n")
-    
+
     uvicorn.run("server:app", host="0.0.0.0", port=8008, reload=False)

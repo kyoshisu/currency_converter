@@ -71,3 +71,5 @@ class CurrencyConverter:
     def get_available_currencies(self) -> List[str]:
         # Возвращает список доступных валют #
         return list(self.exchange_rates.keys())
+
+

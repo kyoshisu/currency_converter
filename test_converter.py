@@ -168,3 +168,5 @@ def test_encoding_errors():
 
     if os.path.exists(invalid_file):
         os.remove(invalid_file)
+
+
